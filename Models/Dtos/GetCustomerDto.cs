@@ -1,12 +1,12 @@
 ﻿using SmartQueueApi.Models.Enums;
 
-namespace SmartQueueApi.Dtos
+namespace SmartQueueApi.Models.Dtos
 {
     public class GetCustomerDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime CreatedAt { get; set; }
-        public CustomerStatus Status { get; set; }
+        public string Status { get; set; }
     }
 }

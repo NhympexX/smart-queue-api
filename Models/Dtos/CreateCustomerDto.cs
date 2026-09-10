@@ -1,4 +1,4 @@
-﻿namespace SmartQueueApi.Dtos
+﻿namespace SmartQueueApi.Models.Dtos
 {
     public class CreateCustomerDto
     {
