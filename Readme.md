@@ -21,6 +21,7 @@ Layihədə aşağıdakı əməliyyatlar mövcuddur:
 ## İstifadə olunan texnologiyalar
 
 * **C#**
+* **.NET 9**
 * **ASP.NET Core Web API**
 * **Entity Framework Core**
 * **PostgreSQL**
@@ -247,6 +248,13 @@ olması təmin edilir və eyni müştərinin iki request tərəfindən çağır�
 ---
 
 ## Layihənin necə işə salınması
+
+### Tələblər
+
+Layihəni işə salmaq üçün aşağıdakılar sistemdə quraşdırılmış olmalıdır:
+
+* **.NET 9 SDK**
+* **PostgreSQL**
 
 ### 1. Repository-ni clone edin
 
