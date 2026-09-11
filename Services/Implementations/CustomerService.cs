@@ -97,7 +97,7 @@ namespace SmartQueueApi.Services.Implementations
         public async Task<ServiceResult> GetCustomerQueuePositionAsync(int id)
         {
             var doesCustomerExist = await context.Customers.AsNoTracking().Where(e => e.Id ==id && e.Status == Models.Enums.CustomerStatus.Waiting).AnyAsync();
-            if (!doesCustomerExist) return ServiceResult.Fail(StatusCodes.Status400BadRequest, "CustomerDoesNotExist");
+            if (!doesCustomerExist) return ServiceResult.Fail(StatusCodes.Status404NotFound, "CustomerNotFound");
 
             int position = await context.Customers.AsNoTracking().Where(e => e.Status == Models.Enums.CustomerStatus.Waiting && e.Id <= id).OrderBy(e => e.CreatedAt).ThenByDescending(e => e.Id).CountAsync();
             return ServiceResult.Success(StatusCodes.Status200OK, position);
